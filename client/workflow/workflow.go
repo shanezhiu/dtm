@@ -180,7 +180,7 @@ func (wf *Workflow) OnFinish(fn func(bb *dtmcli.BranchBarrier, isRollback bool) 
 	})
 }
 
-// Do will do an action which will be recored
+// Do will do an action which will be recorded
 func (wf *Workflow) Do(fn func(bb *dtmcli.BranchBarrier) ([]byte, error)) ([]byte, error) {
 	res := wf.recordedDo(func(bb *dtmcli.BranchBarrier) *stepResult {
 		r, e := fn(bb)
