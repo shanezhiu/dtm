@@ -157,7 +157,7 @@ func (wf *Workflow) OnRollback(compensate WfPhase2Func) *Workflow {
 	return wf
 }
 
-// OnCommit will will set the callback for current branch when commit happen.
+// OnCommit will set the callback for current branch when commit happen.
 // If you are writing a tcc transaction, then you should write the confirm operation here
 func (wf *Workflow) OnCommit(fn WfPhase2Func) *Workflow {
 	branchID := wf.currentBranch
